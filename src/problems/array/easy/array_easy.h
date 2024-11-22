@@ -18,5 +18,6 @@
   *  arr[1,2,3,_,_,_,_]
 */
 namespace remove_duplicates_from_sorted_array {
+void optimal_two_pointers();
 void brute_using_set();
-}
+} // namespace remove_duplicates_from_sorted_array
