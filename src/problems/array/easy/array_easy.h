@@ -24,4 +24,5 @@ void brute_using_set();
 
 namespace left_rotate_array {
 void temp_array();
-}
+void reverse_array();
+} // namespace left_rotate_array
