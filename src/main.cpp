@@ -1,2 +1,2 @@
 #include "array_easy.h"
-int main() { remove_duplicates_from_sorted_array::optimal_two_pointers(); }
+int main() { left_rotate_array::temp_array(); }

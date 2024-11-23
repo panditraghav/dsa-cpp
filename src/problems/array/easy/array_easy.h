@@ -21,3 +21,7 @@ namespace remove_duplicates_from_sorted_array {
 void optimal_two_pointers();
 void brute_using_set();
 } // namespace remove_duplicates_from_sorted_array
+
+namespace left_rotate_array {
+void temp_array();
+}
