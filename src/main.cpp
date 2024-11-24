@@ -1,2 +1,2 @@
-#include "array_easy.h"
-int main() { left_rotate_array::reverse_array(); }
+#include "oned_array.h"
+int main() { binary_search_test(); }
