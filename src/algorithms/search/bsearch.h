@@ -1,2 +1,2 @@
 #include <vector>
-int b_search(std::vector<int> &arr, int target);
+int bsearch(std::vector<int> &arr, int target);

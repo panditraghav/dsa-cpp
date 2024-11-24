@@ -19,5 +19,5 @@ void binary_search_test() {
   print_vector(vec);
   std::cout << "Target: " << target << "\n";
 
-  std::cout << "Target is located at index: " << b_search(vec, target) << "\n";
+  std::cout << "Target is located at index: " << bsearch(vec, target) << "\n";
 }

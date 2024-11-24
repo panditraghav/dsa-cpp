@@ -1,7 +1,7 @@
 #include "bsearch.h"
 #include <cstddef>
 
-int b_search(std::vector<int> &arr, int target) {
+int bsearch(std::vector<int> &arr, int target) {
   size_t low = 0, high = arr.size() - 1;
 
   while (low <= high) {
