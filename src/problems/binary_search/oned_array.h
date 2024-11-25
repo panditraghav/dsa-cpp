@@ -15,4 +15,5 @@ void binary_search_test();
  */
 namespace find_lower_bound_in_sorted_array {
 void brute_linear_search();
+void optimal_binary_search();
 } // namespace find_lower_bound_in_sorted_array
