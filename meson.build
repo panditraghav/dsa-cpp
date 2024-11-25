@@ -12,7 +12,8 @@ src = [
 './src/problems/array/easy/remove_duplicates.cpp',
 './src/problems/array/easy/left_rotate_array.cpp',
 './src/algorithms/search/bsearch.cpp',
-'./src/problems/binary_search/oned_array.cpp'
+'./src/problems/binary_search/oned_array.cpp',
+'./src/problems/binary_search/lower_bound.cpp'
 ]
 
 executable('dsa', src, include_directories: incdir)
