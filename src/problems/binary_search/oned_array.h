@@ -1,3 +1,4 @@
+#include <vector>
 void binary_search_test();
 
 /*
@@ -14,6 +15,21 @@ void binary_search_test();
  * Link: https://takeuforward.org/arrays/implement-lower-bound-bs-2/
  */
 namespace find_lower_bound_in_sorted_array {
+void take_input(std::vector<int> &vec, int &num);
 void brute_linear_search();
 void optimal_binary_search();
 } // namespace find_lower_bound_in_sorted_array
+
+/*
+ * Example 1:
+ * Input Format:
+ *  N = 4, arr[] = {1,2,2,3}, x = 2
+ * Result:
+ *  3
+ * Explanation:
+ *  Index 3 is the smallest index such that arr[3] > x.
+ */
+namespace find_upper_bound_in_sorted_array {
+void take_input(std::vector<int> &vec, int &num);
+void optimal_binary_search();
+} // namespace find_upper_bound_in_sorted_array

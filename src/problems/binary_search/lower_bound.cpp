@@ -5,7 +5,8 @@
 #include <ios>
 #include <iostream>
 
-void take_input(std::vector<int> &vec, int &num) {
+void find_lower_bound_in_sorted_array::take_input(std::vector<int> &vec,
+                                                  int &num) {
   std::fstream f("input.txt", std::ios_base::in);
   if (!f.is_open()) {
     std::cerr << "ERROR: Unable to open file\n";
@@ -47,7 +48,7 @@ void find_lower_bound_in_sorted_array::optimal_binary_search() {
   std::cout << "find_lower_bound_in_sorted_array::optimal_binary_search()\n";
   std::vector<int> vec;
   int num;
-  take_input(vec, num);
+  find_lower_bound_in_sorted_array::take_input(vec, num);
 
   size_t low = 0, high = vec.size() - 1, mid = 0;
   size_t lower_bound = vec.size() - 1;
