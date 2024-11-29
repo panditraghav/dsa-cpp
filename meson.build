@@ -14,7 +14,8 @@ src = [
 './src/algorithms/search/bsearch.cpp',
 './src/problems/binary_search/oned_array.cpp',
 './src/problems/binary_search/lower_bound.cpp',
-'./src/problems/binary_search/upper_bound.cpp'
+'./src/problems/binary_search/upper_bound.cpp',
+'./src/problems/binary_search/search_insert_position.cpp'
 ]
 
 executable('dsa', src, include_directories: incdir)
