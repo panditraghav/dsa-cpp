@@ -15,7 +15,6 @@ void binary_search_test();
  * Link: https://takeuforward.org/arrays/implement-lower-bound-bs-2/
  */
 namespace find_lower_bound_in_sorted_array {
-void take_input(std::vector<int> &vec, int &num);
 void brute_linear_search();
 void optimal_binary_search();
 } // namespace find_lower_bound_in_sorted_array
@@ -30,7 +29,6 @@ void optimal_binary_search();
  *  Index 3 is the smallest index such that arr[3] > x.
  */
 namespace find_upper_bound_in_sorted_array {
-void take_input(std::vector<int> &vec, int &num);
 void optimal_binary_search();
 } // namespace find_upper_bound_in_sorted_array
 
@@ -48,6 +46,18 @@ private:
 
 public:
   void optimal();
-  void take_input(std::vector<int> &vec, int &num);
-  SearchInsertPosition() { take_input(arr, num); }
+  SearchInsertPosition();
 };
+
+/*
+ * Problem Statement: You're given an sorted array arr of n integers and an
+ * integer x. Find the floor and ceiling of x in arr[0..n-1]. The floor of x is
+ * the largest element in the array which is smaller than or equal to x. The
+ * ceiling of x is the smallest element in the array greater than or equal to x.
+ * Example 1:
+ * Input Format: n = 6, arr[] ={3, 4, 4, 7, 8, 10}, x= 5
+ * Result: 4 7
+ * Explanation: The floor of 5 in the array is 4, and the ceiling of 5 in the
+ * array is 7.
+ */
+class FloorAndCeil {};

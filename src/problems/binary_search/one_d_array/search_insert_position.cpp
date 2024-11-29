@@ -1,29 +1,7 @@
 #include "input.h"
 #include "oned_array.h"
-#include "output.h"
 #include <cstddef>
-#include <fstream>
 #include <iostream>
-
-void SearchInsertPosition::take_input(std::vector<int> &vec, int &num) {
-  std::fstream f("input.txt", std::ios_base::in);
-  if (!f.is_open()) {
-    std::cerr << "ERROR: Unable to open file\n";
-    return;
-  }
-  if (!get_vector_from_fstream(f, vec)) {
-    std::cerr << "ERROR: Unable to get vector from input file\n";
-    return;
-  }
-  std::cout << "Input vector:- ";
-  print_vector(vec);
-
-  if (!get_int_from_fstream(f, num)) {
-    std::cerr << "ERROR: Unable to get number from input file\n";
-    return;
-  }
-  std::cout << "Input number:- " << num << "\n";
-}
 
 void SearchInsertPosition::optimal() {
   std::cout << "SearchInsertPosition::optimal()\n";
@@ -43,4 +21,8 @@ void SearchInsertPosition::optimal() {
   }
   std::cout << "Search number not found!\n";
   std::cout << "Number should be inserted at index: " << mid << "\n";
+}
+
+SearchInsertPosition::SearchInsertPosition() {
+  get_vector_and_num(this->arr, this->num);
 }
