@@ -1,5 +1,7 @@
 #include "input.h"
+#include "output.h"
 #include <cstddef>
+#include <iostream>
 #include <string>
 
 bool get_vector_from_string(std::string str, std::vector<int> &vec) {
@@ -63,5 +65,26 @@ bool get_int_from_fstream(std::fstream &f, int &i) {
   }
 
   i = std::stoi(str);
+  return true;
+}
+
+bool get_vector_and_num(std::vector<int> &vec, int &num) {
+  std::fstream f("input.txt", std::ios_base::in);
+  if (!f.is_open()) {
+    std::cerr << "ERROR: Unable to open file\n";
+    return false;
+  }
+  if (!get_vector_from_fstream(f, vec)) {
+    std::cerr << "ERROR: Unable to get vector from input file\n";
+    return false;
+  }
+  std::cout << "Input vector:- ";
+  print_vector(vec);
+
+  if (!get_int_from_fstream(f, num)) {
+    std::cerr << "ERROR: Unable to get number from input file\n";
+    return false;
+  }
+  std::cout << "Input number:- " << num << "\n";
   return true;
 }
