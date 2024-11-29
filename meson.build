@@ -2,7 +2,7 @@ project('dsa', 'cpp')
 incdir = [
   include_directories('./src/utils'),
   include_directories('./src/problems/array/easy'),
-  include_directories('./src/problems/binary_search'),
+  include_directories('./src/problems/binary_search/one_d_array'),
   include_directories('./src/algorithms/search')
 ]
 src = [
@@ -12,10 +12,10 @@ src = [
 './src/problems/array/easy/remove_duplicates.cpp',
 './src/problems/array/easy/left_rotate_array.cpp',
 './src/algorithms/search/bsearch.cpp',
-'./src/problems/binary_search/oned_array.cpp',
-'./src/problems/binary_search/lower_bound.cpp',
-'./src/problems/binary_search/upper_bound.cpp',
-'./src/problems/binary_search/search_insert_position.cpp'
+'./src/problems/binary_search/one_d_array/oned_array.cpp',
+'./src/problems/binary_search/one_d_array/lower_bound.cpp',
+'./src/problems/binary_search/one_d_array/upper_bound.cpp',
+'./src/problems/binary_search/one_d_array/search_insert_position.cpp'
 ]
 
 executable('dsa', src, include_directories: incdir)
