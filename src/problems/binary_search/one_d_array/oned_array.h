@@ -83,3 +83,13 @@ public:
   void optimal_binary_upperbound();
   LastOccuranceInSortedArray();
 };
+
+class FirstOccuranceInSortedArray {
+private:
+  std::vector<int> arr;
+  int num;
+
+public:
+  void optimal_binary_search_lowerbound();
+  FirstOccuranceInSortedArray();
+};
