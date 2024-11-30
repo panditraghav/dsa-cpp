@@ -1,5 +1,5 @@
 #include "oned_array.h"
 int main() {
-  FloorAndCeil solution;
-  solution.optimal_binary();
+  LastOccuranceInSortedArray solution;
+  solution.brute_linear();
 }

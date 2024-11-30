@@ -16,7 +16,8 @@ src = [
 './src/problems/binary_search/one_d_array/lower_bound.cpp',
 './src/problems/binary_search/one_d_array/upper_bound.cpp',
 './src/problems/binary_search/one_d_array/search_insert_position.cpp',
-'./src/problems/binary_search/one_d_array/floor_and_ceil.cpp'
+'./src/problems/binary_search/one_d_array/floor_and_ceil.cpp',
+'./src/problems/binary_search/one_d_array/last_occurance.cpp'
 ]
 
 executable('dsa', src, include_directories: incdir)

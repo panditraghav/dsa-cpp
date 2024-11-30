@@ -70,3 +70,14 @@ public:
   void optimal_binary();
   FloorAndCeil();
 };
+
+class LastOccuranceInSortedArray {
+private:
+  std::vector<int> arr;
+  int num;
+
+public:
+  void brute_linear();
+  void optimal_binary();
+  LastOccuranceInSortedArray();
+};
