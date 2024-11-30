@@ -80,5 +80,6 @@ public:
   void brute_linear();
   void better_linear();
   void optimal_binary();
+  void optimal_binary_upperbound();
   LastOccuranceInSortedArray();
 };

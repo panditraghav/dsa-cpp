@@ -64,3 +64,42 @@ void LastOccuranceInSortedArray::optimal_binary() {
   }
   std::cout << "Last occurance is: " << num_index - 1 << std::endl;
 }
+
+/*
+ * Using binary search, to find the upper bound and then.
+ * Upperbound - 1 will be the last occurance
+ */
+void LastOccuranceInSortedArray::optimal_binary_upperbound() {
+  std::cout << "LastOccuranceInSortedArray::optimal_binary_upperbound()\n";
+  size_t low = 0, high = arr.size() - 1, mid = 0;
+  int ub = -1;
+  int equal = -1;
+
+  while (low <= high) {
+    mid = (low + high) / 2;
+
+    if (arr[mid] == num) {
+      low = mid + 1;
+      // If upper bound doesn't exist (num is the last element).
+      // Then this will be the last element
+      equal = mid;
+    }
+
+    if (arr[mid] > num) {
+      ub = mid;
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+  if (ub == -1) {
+    if (equal == -1) {
+      std::cout << "Element doesn't exist\n";
+      return;
+    } else {
+      std::cout << "Last occurance is at index: " << equal;
+      return;
+    }
+  }
+  std::cout << "Last occurance is at index: " << ub - 1;
+}
