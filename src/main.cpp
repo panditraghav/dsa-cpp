@@ -1,5 +1,5 @@
 #include "oned_array.h"
 int main() {
-  SearchInsertPosition s;
-  s.optimal();
+  FloorAndCeil solution;
+  solution.brute_linear();
 }

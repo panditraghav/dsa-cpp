@@ -60,4 +60,12 @@ public:
  * Explanation: The floor of 5 in the array is 4, and the ceiling of 5 in the
  * array is 7.
  */
-class FloorAndCeil {};
+class FloorAndCeil {
+private:
+  std::vector<int> arr;
+  int num;
+
+public:
+  void brute_linear();
+  FloorAndCeil();
+};
