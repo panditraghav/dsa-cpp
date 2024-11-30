@@ -26,3 +26,31 @@ void FloorAndCeil::brute_linear() {
 
   std::cout << "Floor: " << floor << " Ceil: " << ceil << "\n";
 }
+
+/*
+ * Arr: 3, 4, 4, 7, 8, 10
+ * Num: 5
+ */
+void FloorAndCeil::optimal_binary() {
+  int floor = INT_MIN, ceil = INT_MIN;
+  size_t low = 0, high = arr.size() - 1, mid = 0;
+
+  while (low <= high) {
+    mid = (low + high) / 2;
+    if (arr[mid] == num) {
+      floor = arr[mid];
+      ceil = arr[mid];
+      break;
+    }
+
+    if (arr[mid] > num) {
+      ceil = arr[mid];
+      high = mid - 1;
+    } else {
+      floor = arr[mid];
+      low = mid + 1;
+    }
+  }
+
+  std::cout << "Floor: " << floor << " Ceil: " << ceil << "\n";
+}

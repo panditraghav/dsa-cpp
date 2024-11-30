@@ -67,5 +67,6 @@ private:
 
 public:
   void brute_linear();
+  void optimal_binary();
   FloorAndCeil();
 };
