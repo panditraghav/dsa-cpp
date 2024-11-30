@@ -78,6 +78,7 @@ private:
 
 public:
   void brute_linear();
+  void better_linear();
   void optimal_binary();
   LastOccuranceInSortedArray();
 };

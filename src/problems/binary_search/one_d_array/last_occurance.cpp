@@ -17,3 +17,18 @@ void LastOccuranceInSortedArray::brute_linear() {
   }
   std::cout << "Last occurance is: " << last_occurance << std::endl;
 }
+
+void LastOccuranceInSortedArray::better_linear() {
+  int last_occurance = -1;
+  for (size_t i = 0; i < arr.size(); i++) {
+    if (arr[i] == num) {
+      last_occurance = i;
+    }
+    // Since array is sorted, if current number is greater then num
+    // then all nums after this will not be num
+    if (arr[i] > num) {
+      break;
+    }
+  }
+  std::cout << "Last occurance is: " << last_occurance << std::endl;
+}
