@@ -58,3 +58,39 @@ void SearchElementInRotatedArray::find_rotation_point_and_bsearch() {
     std::cout << "Unable to find the number!" << std::endl;
   }
 }
+
+void SearchElementInRotatedArray::optimal_bsearch() {
+  std::cout << "=========================\n";
+  std::cout << "-----optimal_bsearch-----\n";
+
+  int low = 0, high = m_arr.size() - 1, mid = 0;
+
+  while (low <= high) {
+    mid = (low + high) / 2;
+
+    if (m_arr[mid] == m_num) {
+      std::cout << "Number found at index: " << mid << std::endl;
+      return;
+    }
+
+    // This means left side is sorted
+    if (m_arr[low] <= m_arr[mid]) {
+      // Our number is in this side!
+      if (m_num >= m_arr[low] && m_num < m_arr[mid]) {
+        high = mid - 1;
+      } else {
+        // Our number is on other side, which may or maynot be sorted
+        low = mid + 1;
+      }
+    } else { // Right side is sorted
+      if (m_num > m_arr[mid] && m_num <= m_arr[high]) {
+        low = mid + 1;
+      } else {
+        // Our number is on other side, which may or maynot be sorted
+        high = mid - 1;
+      }
+    }
+  }
+
+  std::cout << "Unable to find the number!" << std::endl;
+}

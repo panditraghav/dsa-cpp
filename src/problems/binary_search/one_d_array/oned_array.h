@@ -105,6 +105,6 @@ private:
 
 public:
   void find_rotation_point_and_bsearch();
-  bool bsearch(std::vector<int> &arr, int start, int end, int key, size_t &ans);
+  void optimal_bsearch();
   SearchElementInRotatedArray();
 };
