@@ -1,5 +1,5 @@
 #include "oned_array.h"
 int main() {
-  FirstOccuranceInSortedArray solution;
-  solution.optimal_binary_search_lowerbound();
+  SearchElementInRotatedArray solution;
+  solution.find_rotation_point_and_bsearch();
 }

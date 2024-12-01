@@ -93,3 +93,18 @@ public:
   void optimal_binary_search_lowerbound();
   FirstOccuranceInSortedArray();
 };
+
+/*
+ * Input : arr = [4,5,6,7,0,1,2,3], k = 0
+ * Result: 4
+ */
+class SearchElementInRotatedArray {
+private:
+  std::vector<int> m_arr;
+  int m_num;
+
+public:
+  void find_rotation_point_and_bsearch();
+  bool bsearch(std::vector<int> &arr, int start, int end, int key, size_t &ans);
+  SearchElementInRotatedArray();
+};

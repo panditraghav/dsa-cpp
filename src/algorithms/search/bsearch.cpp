@@ -1,31 +1,31 @@
 #include "bsearch.h"
-#include <cstddef>
 
-int bsearch(std::vector<int> &arr, int target) {
-  size_t low = 0, high = arr.size() - 1;
+bool my_algos::bsearch(std::vector<int> &arr, int start, int end, int key,
+                       size_t &ans) {
+  while (start <= end) {
+    size_t mid = (start + end) / 2;
 
-  while (low <= high) {
-    size_t mid = (low + high) / 2;
+    if (arr[mid] == key) {
+      ans = mid;
+      return true;
+    }
 
-    if (arr[mid] == target)
-      return mid;
-
-    if (arr[mid] < target) {
-      high = mid - 1;
+    if (arr[mid] < key) {
+      start = mid + 1;
     } else {
-      low = mid + 1;
+      end = mid - 1;
     }
   }
-  return -1;
+  return false;
 }
 
-int bsearch_recursive(std::vector<int> &arr, int target, size_t low,
-                      size_t high) {
+int my_algos::bsearch_recursive(std::vector<int> &arr, int target, int low,
+                                int high) {
   if (low > high) {
     return -1;
   }
 
-  size_t mid = (low + high) / 2;
+  int mid = (low + high) / 2;
 
   if (arr[mid] == target) {
     return mid;
