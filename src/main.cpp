@@ -1,5 +1,5 @@
 #include "oned_array.h"
 int main() {
-  FindMinimumInRotatedArray solution;
+  NumberOfRotation solution;
   solution.optimal_bsearch();
 }
