@@ -18,7 +18,8 @@ src = [
 './src/problems/binary_search/one_d_array/floor_and_ceil.cpp',
 './src/problems/binary_search/one_d_array/last_occurance.cpp',
 './src/problems/binary_search/one_d_array/first_occurance.cpp',
-'./src/problems/binary_search/one_d_array/search_in_rotated.cpp'
+'./src/problems/binary_search/one_d_array/search_in_rotated.cpp',
+'./src/problems/binary_search/one_d_array/minimum_in_rotated_array.cpp'
 ]
 
 executable('dsa', src, include_directories: incdir)

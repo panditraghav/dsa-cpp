@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 void binary_search_test();
 
@@ -107,4 +108,23 @@ public:
   void find_rotation_point_and_bsearch();
   void optimal_bsearch();
   SearchElementInRotatedArray();
+};
+
+/*
+ * Problem Statement: Given an integer array arr of size N, sorted in ascending
+ * order (with distinct values). Now the array is rotated between 1 to N times
+ * which is unknown. Find the minimum element in the array.
+ * Example 1:
+ * Input Format:
+ *  arr = [4,5,6,7,0,1,2,3]
+ * Result:
+ *  0
+ */
+class FindMinimumInRotatedArray {
+private:
+  std::vector<int> m_arr;
+
+public:
+  void optimal_bsearch();
+  FindMinimumInRotatedArray();
 };
