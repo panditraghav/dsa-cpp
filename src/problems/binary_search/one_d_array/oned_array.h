@@ -142,3 +142,21 @@ public:
   void optimal_bsearch();
   NumberOfRotation();
 };
+
+/*
+ * Problem Statement: Given an array of N integers. Every number in the array
+ * except one appears twice. Find the single number in the array.
+ * Example 1:
+ * Input Format:
+ * arr[] = {1,1,2,2,3,3,4,5,5,6,6}
+ * Result:
+ * 4
+ */
+class SingleElementInSortedArray {
+private:
+  std::vector<int> m_arr;
+
+public:
+  void brute();
+  SingleElementInSortedArray();
+};

@@ -20,7 +20,8 @@ src = [
 './src/problems/binary_search/one_d_array/first_occurance.cpp',
 './src/problems/binary_search/one_d_array/search_in_rotated.cpp',
 './src/problems/binary_search/one_d_array/minimum_in_rotated_array.cpp',
-'./src/problems/binary_search/one_d_array/number_of_rotation.cpp'
+'./src/problems/binary_search/one_d_array/number_of_rotation.cpp',
+'./src/problems/binary_search/one_d_array/single_element_in_sorted_array.cpp'
 ]
 
 executable('dsa', src, include_directories: incdir)
